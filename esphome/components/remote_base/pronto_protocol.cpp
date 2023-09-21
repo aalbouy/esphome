@@ -229,12 +229,12 @@ optional<ProntoData> ProntoProtocol::decode(RemoteReceiveData src) {
 void ProntoProtocol::dump(const ProntoData &data) {
   std::vector<std::string> subStr;
 
-  for (int start = 0; start < data.data.length; start += 230) {
+  for (int start = 0; start < data.data.length(); start += 230) {
       subStr.push_back(data.data.substr(start, 229));
   }
 
   for (int i = 0; i < subStr.size(); i++) {
-    ESP_LOGI(TAG, "%s", str.c_str());
+    ESP_LOGI(TAG, "%s", subStr[i].c_str());
   }
 }
 
