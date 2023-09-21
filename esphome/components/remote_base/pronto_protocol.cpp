@@ -35,8 +35,6 @@
 #include "pronto_protocol.h"
 #include "esphome/core/log.h"
 
-#include 
-
 namespace esphome {
 namespace remote_base {
 
@@ -235,7 +233,7 @@ void ProntoProtocol::dump(const ProntoData &data) {
       subStr.push_back(data.data.substr(start, 229));
   }
 
-  for (const std::string &str : subStr) {
+  for (int i = 0; i < subStr.size(); i++) {
     ESP_LOGI(TAG, "%s", str.c_str());
   }
 }
