@@ -48,6 +48,8 @@ void RemoteReceiverComponent::setup() {
   void *buf = (void *) s.buffer;
   memset(buf, 0, s.buffer_size * sizeof(uint32_t));
 
+
+
   // First index is a space.
   if (this->pin_->digital_read()) {
     s.buffer_write_at = s.buffer_read_at = 1;
