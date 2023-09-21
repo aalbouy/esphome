@@ -35,8 +35,6 @@
 #include "pronto_protocol.h"
 #include "esphome/core/log.h"
 
-#include 
-
 namespace esphome {
 namespace remote_base {
 
